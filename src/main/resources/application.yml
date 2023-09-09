@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/twelfth
+    username: root
+    password: 1
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+application:
+  security:
+    jwt:
+      secret-key: b490c2fc5270ea6bbeb532712dc6eaae94f62eaa17be134336fb2a985bb20c9b
+      expiration: 86400000
+      refresh-token:
+        expiration: 604800000
